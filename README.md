@@ -228,7 +228,7 @@ Considering all the inputs provided, we can predict whether an employee will be 
 corrplot(cor_matrix, method = "color", col = colorRampPalette(c("yellow","white","blue"))(200), tl.cex=0.8, tl.col = "black", number.cex = 0.7, is.corr=TRUE,  addCoef.col = "black", number.digits=2)
 
 ```
-![heatmap](https://github.com/user-attachments/assets/54a769cd-c0da-4fb2-b137-b905c68313ad)
+![heatmap2](https://github.com/user-attachments/assets/9c5c5c66-2c19-4f79-ba00-adf371cd6974)
 
 From the correlation matrix heatmap, we can infer that 
 Total Working Years and Job Level have a notable positive correlation, suggesting that employees with more experience are more likely to be at higher job levels.
