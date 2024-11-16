@@ -248,7 +248,7 @@ Job Satisfaction and Environment Satisfaction show some positive correlation wit
 
 **Logistic Regression**
 
-
+```{r pressure, echo=FALSE}
 # Split the data into training and test sets
 
 set.seed(0)  
