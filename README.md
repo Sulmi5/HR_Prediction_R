@@ -222,10 +222,20 @@ Employee attrition is highest among younger employees, those with low job and en
 
 
 ### Step 5 : Model Development_Multiple Linear Regression 
-Considering all the inputs provided, we can predict whether an employee will be staying.  First, let’s look at the relationship between variables. 
+
+**Prediction**
 
 ```{r pressure, echo=FALSE}
-corrplot(cor_matrix, method = "color", col = colorRampPalette(c("yellow","white","blue"))(200), tl.cex=0.8, tl.col = "black", number.cex = 0.7, is.corr=TRUE,  addCoef.col = "black", number.digits=2)
+#select relevant column for x and y
+x<- hr_df %>%
+  select(-Attrition, -StandardHours, -EmployeeCount)
+y <- hr_df$Attrition
+```
+
+Considering relevant inputs provided, we can predict whether an employee will be staying.  First, let’s look at the relationship between variables. 
+
+```{r pressure, echo=FALSE}
+corrplot(cor_matrix, method = "color", col = colorRampPalette(c("yellow","white","green"))(200), tl.cex=0.7, tl.col = "black", number.cex = 0.5, is.corr=TRUE,  addCoef.col = "black", number.digits=2)
 
 ```
 ![heatmap2](https://github.com/user-attachments/assets/9c5c5c66-2c19-4f79-ba00-adf371cd6974)
@@ -237,15 +247,6 @@ Years At Company is moderately correlated with Years In CurrentRole, Years With 
 Job Satisfaction and Environment Satisfaction show some positive correlation with Relationship Satisfaction, indicating that employees who are satisfied with their environment and job may also have better workplace relationships.
 
 **Logistic Regression**
-```{r pressure, echo=FALSE}
-#load library
-library(caret)
-library(glmnet)
-
-#select relevant column for x and y
-x<- hr_df %>%
-  select(-Attrition, -StandardHours, -EmployeeCount)
-y <- hr_df$Attrition
 
 
 # Split the data into training and test sets
