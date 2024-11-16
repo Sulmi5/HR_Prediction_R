@@ -15,7 +15,24 @@ High turnover can lead to significant costs—both financially and culturally. H
 
 Analytics reveals turnover patterns, helping identify and address root causes early. With HR analytics, organizations gain insights to retain talent, reduce hiring costs, and foster a more stable, engaged workforce aligned with their goals.
 
-### Steps followed 
+## From the Analysis ##
+
+**Observation**
+
+- Employees who work overtime are  more likely to leave, as indicated by a high positive coefficient (1.95). This suggests that overtime could lead to burnout or job dissatisfaction.
+
+- Job Roles such as Sales Representative and Laboratory Technician have higher attrition risks (positive coefficients of 1.57 and 1.00, respectively), while Research Directors are less likely to leave.
+
+- Frequent travelers are more likely to leave, and even rare travelers show a slight increase in attrition risk. Travel demands may contribute to work-life imbalance or stress.
+
+- Single employees have a higher attrition likelihood, possibly due to less attachment to the organization or fewer work-life obligations.
+
+**Insights**	
+
+It's worth considering to implement policies to reduce excessive overtime and offer support for affected employees. In order to reduce the number of Sales Representative leaving, the company should address unique challenges in these high-risk roles, perhaps by providing targeted support and career development opportunities. As frequent travelers may affect the wellbeing of the employee, the company should consider flexible travel policies and support for work-life balance. Moreover, the company should enhance engagement and support networks for single employees.
+
+
+## Steps followed ##
 
 - Step 1 : Load data into R studio 
 - Step 2 : Clean data and deal with N/A values if exists 
@@ -24,7 +41,7 @@ Analytics reveals turnover patterns, helping identify and address root causes ea
 - Step 5 : Train the Model 
 - Step 6 : Analysis & Insights 
 
-#### Step 1 : Load data into R studio
+### Step 1 : Load data into R studio
 
  ```R
 hr_df <- read.csv("WA_Fn-UseC_-HR-Employee-Attrition.csv")
@@ -32,7 +49,7 @@ glimpse(hr_df)
 
 ```
 
-#### Step 2 : Clean data and deal with N/A values if exists 
+### Step 2 : Clean data and deal with N/A values if exists 
 
 ```R
 colSums(is.na(hr_df))
@@ -390,13 +407,13 @@ The logistic regression analysis reveals key factors influencing the likelihood 
 
 **Analysis**
 
-Employees who work overtime are  more likely to leave, as indicated by a high positive coefficient (1.95). This suggests that overtime could lead to burnout or job dissatisfaction.
+- Employees who work overtime are  more likely to leave, as indicated by a high positive coefficient (1.95). This suggests that overtime could lead to burnout or job dissatisfaction.
 
-Job Roles: Roles such as Sales Representative and Laboratory Technician have higher attrition risks (positive coefficients of 1.57 and 1.00, respectively), while Research Directors are less likely to leave.
+- Job Roles: Roles such as Sales Representative and Laboratory Technician have higher attrition risks (positive coefficients of 1.57 and 1.00, respectively), while Research Directors are less likely to leave.
 
-Frequent travelers are more likely to leave, and even rare travelers show a slight increase in attrition risk. Travel demands may contribute to work-life imbalance or stress.
+- Frequent travelers are more likely to leave, and even rare travelers show a slight increase in attrition risk. Travel demands may contribute to work-life imbalance or stress.
 
-Single employees have a higher attrition likelihood, possibly due to less attachment to the organization or fewer work-life obligations.
+- Single employees have a higher attrition likelihood, possibly due to less attachment to the organization or fewer work-life obligations.
 
 **Insights**	
 
